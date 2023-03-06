@@ -1,0 +1,29 @@
+def encrpt():
+    S=str(input("what is S:"))
+    a=int(input("what is a:"))
+    b=int(input("what is b:"))
+    d=[]
+    counter=0
+    for c in S:
+        counter+=1
+        if counter%2==0:
+            if c.isalpha() == True :
+                e=ord(c)+b
+                if e>90 and e<97:
+                    e=e-26
+                elif e>122:
+                    e=e-26
+                d.append(chr(e))
+            else:
+                d.append(c)
+        else:
+            if c.isalpha() == True :
+                e=ord(c)+a
+                if e>90 and e<97:
+                    e=e-26
+                elif e>122:
+                    e=e-26
+                d.append(chr(e))
+            else:
+                d.append(c)
+    print(d)
